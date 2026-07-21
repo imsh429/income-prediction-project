@@ -97,7 +97,7 @@ python load_comparison.py
 
 ### 3. 통계 분석 및 t-검정 실행
 ```bash
-python ipp_통계분석.py
+python ipp_stat.py
 ```
 
 ### 4. 머신러닝 파이프라인 학습 및 모델 저장
