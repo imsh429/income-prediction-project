@@ -36,7 +36,7 @@ UCI Adult Census Income 데이터셋을 활용하여 데이터 로딩 성능 비
 - UCI Machine Learning Repository의 원본 데이터(`adult.data`)를 **Pandas**와 **Polars**로 각각 불러와 구동 성능을 비교합니다.
 - `perf_counter()`를 사용하여 각 라이브러리의 **행/열 크기, 결측치 수, 중복 행, 메모리 점유량(MB), 로딩 시간(초)**을 측정하고 정밀 비교합니다.
 
-### 2. 통계 분석 및 가설 검정 (`ipp_통계분석.py`)
+### 2. 통계 분석 및 가설 검정 (`ipp_stat.py`)
 - **기술통계량**: `describe()` 기본 지표와 더불어 `10%`, `90%` 분위수(Quantile)를 산출합니다.
 - **상관관계 분석**: Pearson 상관계수 행렬을 계산하고, 절댓값 기준 상위 상관 변수 쌍을 추출합니다.
 - **t-검정 (Independent Samples t-test)**: `scipy.stats.ttest_ind(equal_var=False)`를 활용하여 소득 그룹(`income`) 간 연령(`age`) 및 주요 수치형 변수의 평균 차이에 대한 통계적 유의성(p-value)을 검정합니다.
