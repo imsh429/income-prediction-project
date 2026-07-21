@@ -1,0 +1,17 @@
+# 가상환경 / 환경변수
+.d1venv/
+.env
+
+# 파이썬 캐시 및 컴파일 파일
+__pycache__/
+*.pyc
+
+# 테스트 커버리지
+.coverage
+
+# macOS Finder 메타데이터
+.DS_Store
+
+# pytest와 ruff 캐시
+.pytest_cache/
+.ruff_cache/
