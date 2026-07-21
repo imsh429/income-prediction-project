@@ -48,6 +48,7 @@ streamlit run app.py
 ├── ipp_stat.py                      # 기술통계량, 상관계수 및 t-검정 모듈
 ├── app.py                           # Streamlit/Plotly/Seaborn 대시보드 모듈
 ├── ipp_pipeline.py                  # ML 파이프라인 구축, 학습/평가 및 저장 모듈
+├── make_report.py                   # 핵심 KPI 계산 및 Markdown 보고서 자동 생성 모듈
 └── requirements.txt                 # 프로젝트 의존성 라이브러리 목록
 ```
 
@@ -93,6 +94,14 @@ streamlit run app.py
 - **성능 평가 및 모델 저장**:
   - Accuracy, F1-Score, ROC-AUC 평가지표를 출력합니다.
   - 전처리 및 모델 학습이 완료된 전체 파이프라인 객체를 `adult_census_model.joblib`으로 저장합니다.
+ 
+### 5. 보고서 자동 생성 (`make_report.py`)
+- **데이터 로드 및 핵심 지표(KPI) 산출**:
+  - `adult_census_processed.parquet` 정제 데이터를 읽어와 주요 통계 지표를 계산합니다.
+  - 총 분석 대상 수, 평균 연령, 평균 주당 근무 시간, 고소득(`>50K`) 비율 등의 주요 요약 지표를 산출합니다.
+- **Markdown 보고서 작성 및 저장**:
+  - 산출된 KPI 지표와 인사이트(근무 시간 및 인구통계학적 특성 등)를 포함한 리포트 본문을 자동으로 구성합니다.
+  - 최종 보고서를 UTF-8 인코딩 형태의 `report.md` 파일로 저장합니다.
 
 ---
 
