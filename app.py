@@ -38,7 +38,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"    # 사이드바 숨김 (상단 필터 사용)
 )
 
-st.title("📊 Adult Census 데이터 분석 대시보드")
+st.title("Adult Census 데이터 분석 대시보드")
 st.markdown("본 모듈은 **Plotly**(인터랙티브)와 **Seaborn**(정적 시각화)을 결합하여 데이터의 **그룹 비교, 상관관계, 분포**를 탐색하는 **시각화 전용 모듈**입니다.")
 
 # -----------------------------------------------------------------------------
