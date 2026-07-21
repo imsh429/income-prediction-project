@@ -13,25 +13,6 @@ UCI Adult Census Income 데이터셋을 활용하여 데이터 로딩 성능 비
 * **신서현**: Streamlit 대시보드 레이아웃 설계 및 Plotly 인터랙티브 시각화 개발 (`app.py`)
 * **문영진**: 
 
----
-
-## 🛠️ 개발 환경 및 필수 라이브러리
-
-- **Python Version**: `3.11.X`
-- **의존성 라이브러리** (`requirements.txt`):
-
-```text
-pandas
-polars
-pyarrow
-streamlit
-plotly
-matplotlib
-seaborn
-scikit-learn
-scipy
-joblib
-```
 
 ---
 
