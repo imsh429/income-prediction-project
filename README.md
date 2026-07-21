@@ -2,23 +2,40 @@
 
 UCI Adult Census Income 데이터셋을 활용하여 데이터 로딩 성능 비교(Pandas vs Polars), 기술통계량 및 t-검정, Streamlit/Plotly/Seaborn 대시보드 시각화, Scikit-Learn 머신러닝 파이프라인 구축 및 모델 저장까지 모듈별로 구현한 통합 프로젝트입니다.
 
+## 🚀 버전 및 실행 방법
 
+### 1. Python version & dependancy
+#### 본 프로젝트 파일들은 Python 3.11.X 버전을 권장합니다.
 
-<img width="1209" height="828" alt="Image" src="https://github.com/user-attachments/assets/b3e3746d-c576-46f6-a64c-4152a9c859d1" />
+`requirements.txt`에 의존 패키지가 명시되어 있습니다.
+```bash
+pip install -r requirements.txt
+```
 
+### 2. 파일 실행 방법
+본 프로젝트 .py 파일들은 하나의 main.py에 통합된 형태가 아니라,  
+전처리된 데이터셋 'adult_census_processed.parquet' 파일을 각자 불러와 실행하는 형식입니다.  
+또한 의존 모듈이 없어, 프로젝트의 **각 .py 문서는 root directory에서 개별 실행하는 것으로 결과를 얻을 수 있습니다.**
 
+2-1) 데이터 로딩 성능 비교 (Pandas vs Polars)
+```bash
+python load_comparison.py
+```
 
----
+2-2) 통계 분석 및 t-검정 실행
+```bash
+python ipp_stat.py
+```
 
-## 👥 팀원 및 역할 분담
+2-3) 머신러닝 파이프라인 학습 및 모델 저장
+```bash
+python ipp_pipeline.py
+```
 
-* **김서영**:
-* **정준용**:
-* **정웅기**:
-* **우상민**: 
-* **신서현**: Streamlit 대시보드 레이아웃 설계 및 Plotly 인터랙티브 시각화 개발 (`app.py`)
-* **문영진**: 
-
+2-4) Streamlit 시각화 대시보드 실행
+```bash
+streamlit run app.py
+```
 
 ---
 
@@ -28,11 +45,22 @@ UCI Adult Census Income 데이터셋을 활용하여 데이터 로딩 성능 비
 ├── adult_census_processed.parquet   # 전처리 완료 데이터셋
 ├── adult_census_model.joblib        # 학습 및 저장된 ML 파이프라인 모델 (joblib)
 ├── load_comparison.py               # Pandas vs Polars 로딩 및 성능 비교 모듈
-├── ipp_stat.py                  # 기술통계량, 상관계수 및 t-검정 모듈
+├── ipp_stat.py                      # 기술통계량, 상관계수 및 t-검정 모듈
 ├── app.py                           # Streamlit/Plotly/Seaborn 대시보드 모듈
 ├── ipp_pipeline.py                  # ML 파이프라인 구축, 학습/평가 및 저장 모듈
 └── requirements.txt                 # 프로젝트 의존성 라이브러리 목록
 ```
+
+---
+
+## 👥 팀원 및 역할 분담
+
+* **김서영**:
+* **정준용**:
+* **정웅기**:
+* **우상민**: 프로젝트 milestone , ML PipeLine 모델 구성 (`ipp_pipeline.py`)
+* **신서현**: Streamlit 대시보드 레이아웃 설계 및 Plotly 인터랙티브 시각화 개발 (`app.py`)
+* **문영진**:
 
 ---
 
@@ -68,31 +96,8 @@ UCI Adult Census Income 데이터셋을 활용하여 데이터 로딩 성능 비
 
 ---
 
-## 🚀 실행 방법
 
-### 1. 의존성 패키지 설치
-`requirements.txt`에 명시된 패키지를 설치합니다.
+<img width="1209" height="828" alt="Image" src="https://github.com/user-attachments/assets/b3e3746d-c576-46f6-a64c-4152a9c859d1" />
 
-```bash
-pip install -r requirements.txt
-```
 
-### 2. 데이터 로딩 성능 비교 (Pandas vs Polars)
-```bash
-python load_comparison.py
-```
 
-### 3. 통계 분석 및 t-검정 실행
-```bash
-python ipp_stat.py
-```
-
-### 4. 머신러닝 파이프라인 학습 및 모델 저장
-```bash
-python ipp_pipeline.py
-```
-
-### 5. Streamlit 시각화 대시보드 실행
-```bash
-streamlit run app.py
-```
