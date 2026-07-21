@@ -3,7 +3,11 @@
 UCI Adult Census Income 데이터셋을 활용하여 데이터 로딩 성능 비교(Pandas vs Polars), 기술통계량 및 t-검정, Streamlit/Plotly/Seaborn 대시보드 시각화, Scikit-Learn 머신러닝 파이프라인 구축 및 모델 저장까지 모듈별로 구현한 통합 프로젝트입니다.
 
 
+
 <img width="1209" height="828" alt="Image" src="https://github.com/user-attachments/assets/b3e3746d-c576-46f6-a64c-4152a9c859d1" />
+
+
+
 ---
 
 ## 👥 팀원 및 역할 분담
